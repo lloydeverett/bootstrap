@@ -8,7 +8,7 @@ cd "$HOME"
 
 # basics
 sudo apt-get update -y
-sudo apt-get install git zsh clang gcc g++ -y
+sudo apt-get install git zsh clang gcc g++ ripgrep -y
 
 # neovim
 curl -LO "https://github.com/neovim/neovim/releases/latest/download/nvim-linux-$ARCH.tar.gz"

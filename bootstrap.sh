@@ -23,3 +23,6 @@ ln -s "$HOME/lazyvim" "$HOME/.config/nvim"
 git clone "https://github.com/lloydeverett/dotfiles"
 echo "source $HOME/dotfiles/.zshrc_ext" >>"$HOME/.zshrc"
 sudo usermod -s /bin/zsh "$USER"
+
+# claude code
+curl -fsSL https://claude.ai/install.sh | bash

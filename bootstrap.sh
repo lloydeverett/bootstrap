@@ -14,7 +14,7 @@ sudo apt-get install git zsh clang gcc g++ -y
 curl -LO "https://github.com/neovim/neovim/releases/latest/download/nvim-linux-$ARCH.tar.gz"
 sudo rm -rf "/opt/nvim-linux-$ARCH"
 sudo tar -C /opt -xzf "nvim-linux-$ARCH.tar.gz"
-sudo ln -s /opt/nvim-linux-arm64/bin/nvim /usr/bin/nvim
+sudo ln -s "/opt/nvim-linux-$ARCH/bin/nvim" "/usr/bin/nvim"
 git clone "https://github.com/lloydeverett/lazyvim"
 mkdir -p "$HOME/.config"
 ln -s "$HOME/lazyvim" "$HOME/.config/nvim"

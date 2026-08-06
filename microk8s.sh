@@ -7,8 +7,7 @@ sudo snap install microk8s --classic
 sudo usermod -a -G microk8s $USER
 sudo chown -f -R $USER ~/.kube
 
-newgrp microk8s
+sudo microk8s status --wait-ready
+sudo microk8s kubectl get nodes
 
-microk8s status --wait-ready
-microk8s kubectl get nodes
-microk8s enable dns storage
+echo Please log back in to ensure your user has kubectl access

@@ -1,8 +1,22 @@
 #!/bin/bash
 
-ARCH=arm64
-
 set -euo pipefail
+
+RAW_ARCH=$(uname -m)
+case "$RAW_ARCH" in
+x86_64)
+    ARCH="x86_64"
+    ;;
+aarch64 | arm64)
+    ARCH="arm64"
+    ;;
+*)
+    echo "Error: Unsupported architecture '$RAW_ARCH'." >&2
+    exit 1
+    ;;
+esac
+
+echo "detected architecture: $ARCH"
 
 cd "$HOME"
 

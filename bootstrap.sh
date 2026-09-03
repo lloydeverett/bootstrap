@@ -40,3 +40,8 @@ sudo usermod -s /bin/zsh "$USER"
 
 # claude code
 curl -fsSL https://claude.ai/install.sh | bash
+export PATH="$HOME/.local/bin:$PATH"
+
+# claude code plugins
+claude plugin marketplace add anthropics/claude-plugins-official
+claude plugin install mattpocock-skills@claude-plugins-official -y

@@ -24,6 +24,10 @@ cd "$HOME"
 sudo apt-get update -y
 sudo apt-get install git zsh clang gcc g++ ripgrep curl -y
 
+# git
+git config --global user.name "Lloyd Everett"
+git config --global user.email "lloydeverett@gmail.com"
+
 # neovim
 curl -LO "https://github.com/neovim/neovim/releases/latest/download/nvim-linux-$ARCH.tar.gz"
 sudo rm -rf "/opt/nvim-linux-$ARCH"
